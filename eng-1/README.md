@@ -20,7 +20,7 @@ São diferenças cruciais que diferenciam o papel essencial de cada papel. Embor
 <p>Muitas pessoas enfrentam o trade-off entre dedicar mais tempo ao trabalho para alcançar o sucesso profissional e passar mais tempo com a família e amigos para melhorar sua qualidade de vida. Por exemplo, um profissional pode escolher trabalhar horas extras para conseguir uma promoção ou um aumento salarial, mas isso pode significar menos tempo para atividades de lazer e relaxamento, afetando sua qualidade de vida e bem-estar emocional.</p>
 
 
-<h2>Exemplos 3: Java vs Python</h2>
+<h2>Exemplo 3: Java vs Python</h2>
 <p>esempenho vs. Produtividade:
 Java tende a ser mais rápido em termos de desempenho de execução, especialmente para aplicativos que exigem alta eficiência computacional ou manipulação de grandes volumes de dados.
 Python é conhecido por sua produtividade e facilidade de uso. Devido à sua sintaxe simples e legibilidade, os desenvolvedores geralmente podem escrever código Python mais rapidamente do que em Java.</p>
