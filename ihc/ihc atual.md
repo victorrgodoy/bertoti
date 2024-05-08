@@ -4,10 +4,9 @@
 
 ## Exemplificando heurísticas
 
-### Princípio 1
 > Informações e componentes de interface de usuário devem ser apresentáveis em formas perceptíveis
 
-- [x] 1.1 → Conteúdo não-textual
+- [x] Conteúdo não-textual
 
 :heavy_check_mark:  <i>Exemplo de um site que fornece a opção de Libras, um meio gestual-visual.</i>
 <br />
@@ -21,10 +20,9 @@
 
 ![Google Tradutor](/ihc/img/tradutor.png)
 
-### Princípio 2
 > Componentes de interface de usuário e navegação devem ser operáveis
 
-- [x] 2.4.3 → Ordem de foco
+- [x] Ordem de foco
 
 :x: <i>Exemplo da UOL, onde não há ordem de foco e o usuário perde a sequência de navegação facilmente.</i>
 ![Uol](/ihc/img/uol-index.png)
@@ -34,10 +32,9 @@
 :heavy_check_mark: <i>Exemplo a Globo, onde a página é estruturada corretamente e consequentemente é possível ter uma ordem de foco e de navegação</i>
 ![Globo](/ihc/img/globo-index.png)
 
-### Princípio 3
 > Informação e a operação da interface de usuário devem ser entendíveis
 
-- [x] 3.1 → Conteúdo legível
+- [x] Conteúdo legível
 
 :x: <i>Exemplo de uma corrida na 99, onde, no começo mostra um valor, e ao final da corrida é exibido um valor diferente</i>
 
@@ -48,7 +45,7 @@
 
 ---
 
-- [x] 3.2 → Previsível
+- [x] Previsível
 
 :heavy_check_mark: <i>Exemplo do Google onde o design é feito de forma minimalista, deixando previsível a intenção e funcionalidade da página</i>
 <br />
@@ -57,7 +54,7 @@
 
 ---
 
-- [x] 3.2.3 → Navegação consistente
+- [x] Navegação consistente
 
 :heavy_check_mark: <i>Exemplo do Youtube onde a navegação entre os vídeos é intuitiva e simples, separado corretamente entre vídeos e shorts</i>
 
