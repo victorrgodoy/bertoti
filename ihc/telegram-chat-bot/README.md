@@ -1,6 +1,6 @@
-# Chatbot com LLama e Banco de Dados SQLite
+# Chatbot com LLM Functionary
 
-Este projeto configura um chatbot utilizando o modelo de linguagem LLama e um banco de dados SQLite para gerenciar livros e autores. O chatbot é implementado utilizando a biblioteca `telebot` para interagir com usuários via Telegram.
+Este projeto configura um chatbot utilizando o modelo de linguagem functionary e um banco de dados SQLite para gerenciar livros e autores. O chatbot é implementado utilizando a biblioteca `telebot` para interagir com usuários via Telegram.
 
 O chat do Telegram interage por meio de uma inteligência artificial (IA) que lê a mensagem do usuário e busca a melhor correspondência entre as funções predefinidas dentro do código. Este sistema pode ser ajustado para diferentes fins, dependendo das necessidades do projeto.
 
