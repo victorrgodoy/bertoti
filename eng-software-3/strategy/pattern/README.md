@@ -1,7 +1,5 @@
 # Pattern Strategy
 
-Este é o projeto do Pattern Strategy.
+### Diagrama UML
 
-## Diagrama UML
-
-![UML do Strategy](assets/uml_pattern.pdf)
+![UML do Strategy](assets/uml_strategy.png)
