@@ -1,10 +1,18 @@
+import service.CreditCardPayment;
+import service.DebitCardPayment;
+import service.Payment;
+import service.PixPayment;
+
 public class Main {
     public static void main(String[] args) {
-        PaymentProcessor paymentProcessor = new PaymentProcessor();
-        paymentProcessor.execute(220.20, "pix");
-        paymentProcessor.execute(320.20, "boleto");
-        paymentProcessor.execute(420.20, "credito");
-        paymentProcessor.execute(520.20, "debito");
+
+        Payment creditCard = new CreditCardPayment("1234.1234.1234.1234");
+        Payment pix = new PixPayment("pix@gmail.com");
+        Payment debitCard = new DebitCardPayment("4444.4444.4444.4444");
+
+        creditCard.execute(200);
+        pix.execute(100);
+        debitCard.execute(300);
 
     }
 }
