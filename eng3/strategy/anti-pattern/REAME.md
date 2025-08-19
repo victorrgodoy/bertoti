@@ -1,5 +1,31 @@
 # Anti Pattern Strategy
 
-### Diagrama UML ( Herança )
+```mermaid
+classDiagram
+    %% Diagrama do Anti-Pattern (Herança rígida)
+    class Payment {
+        <<abstract>>
+        +execute(double amount)*
+    }
 
-![UML do Strategy](assets/uml_ant_pattern_strategy.drawio.png)
+    class CreditCardPayment {
+        -number: String
+        +execute(double amount)
+    }
+
+    class DebitCardPayment {
+        -number: String
+        +execute(double amount)
+    }
+
+    class PixPayment {
+        -keyPix: String
+        +execute(double amount)
+    }
+
+    %% Relacionamentos Problemáticos
+    CreditCardPayment --|> Payment 
+    DebitCardPayment --|> Payment 
+    PixPayment --|> Payment 
+
+```
