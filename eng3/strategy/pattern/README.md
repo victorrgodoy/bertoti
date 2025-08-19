@@ -1,14 +1,12 @@
-# Strategy
+# Strategy Pattern
 
 ```mermaid
 classDiagram
-    %% Interface Estratégia
     class PaymentStrategy {
         <<interface>>
         +execute(double amount) void
     }
 
-    %% Estratégias Concretas
     class CreditCardPayment {
         -number: String
         +CreditCardPayment(String number)
@@ -27,7 +25,6 @@ classDiagram
         +execute(double amount) void
     }
 
-    %% Contexto
     class PaymentContext {
         -paymentStrategy: PaymentStrategy
         +PaymentContext(PaymentStrategy strategy)
@@ -35,7 +32,6 @@ classDiagram
         +setPaymentStrategy(PaymentStrategy strategy) void
     }
 
-    %% Relacionamentos
     PaymentContext o--> PaymentStrategy : Usa
     CreditCardPayment ..|> PaymentStrategy : Implementa
     DebitCardPayment ..|> PaymentStrategy : Implementa

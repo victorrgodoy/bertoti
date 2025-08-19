@@ -1,8 +1,7 @@
-# Anti Pattern Strategy
+# Strategy Anti Pattern
 
 ```mermaid
 classDiagram
-    %% Diagrama do Anti-Pattern (Herança rígida)
     class Payment {
         <<abstract>>
         +execute(double amount)*
@@ -23,7 +22,6 @@ classDiagram
         +execute(double amount)
     }
 
-    %% Relacionamentos Problemáticos
     CreditCardPayment --|> Payment 
     DebitCardPayment --|> Payment 
     PixPayment --|> Payment 

@@ -1,3 +1,5 @@
+# Observer Pattern
+
 ```mermaid
 classDiagram
     class OrderStatus {
