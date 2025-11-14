@@ -1,0 +1,114 @@
+classDiagram
+%% ========== MVC ARCHITECTURE ==========
+
+%% === MODEL LAYER ===
+    class Client {
+        -String name
+        -String email
+        -String telefone
+        +getName()
+        +getEmail()
+        +getTelefone()
+    }
+
+    class OrderStatus {
+        -Status status
+        -Client client
+        -double amount
+        -List~Observer~ observers
+        +addObserver(Observer)
+        +removeObserver(Observer)
+        +notifyObservers()
+        +setOrderStatus(Status)
+        +getOrderStatus()
+        +getClient()
+        +getAmount()
+    }
+
+    class Status {
+        <<enumeration>>
+        PENDING
+        CONFIRMED
+        CANCELLED
+    }
+
+%% === VIEW LAYER ===
+    class OrderView {
+        +showNewOrder(Client, Status, double)
+    }
+
+%% === CONTROLLER LAYER ===
+    class OrderController {
+        -OrderStatus orderStatus
+        -OrderView view
+        +OrderController(Client, double, PaymentStrategy)
+        +createOrder(Status)
+        +getOrderStatus()
+    }
+
+%% ========== BEHAVIORAL PATTERNS ==========
+
+%% === OBSERVER PATTERN ===
+    class Observer {
+        <<interface>>
+        +update(Client, Status, double)
+    }
+
+    class PaymentObserver {
+        -PaymentContext paymentContext
+        +update(Client, Status, double)
+    }
+
+%% === STRATEGY PATTERN ===
+    class PaymentStrategy {
+        <<interface>>
+        +execute(double)
+    }
+
+    class CreditCardPayment {
+        -String number
+        +execute(double)
+    }
+
+    class DebitCardPayment {
+        -String number
+        +execute(double)
+    }
+
+    class PaymentContext {
+        -PaymentStrategy paymentStrategy
+        +execute(double)
+        +setPaymentStrategy(PaymentStrategy)
+    }
+
+%% ========== RELATIONSHIPS ==========
+
+%% MVC Relationships
+    OrderController --> OrderStatus : creates
+    OrderController --> OrderView : creates
+    OrderController --> PaymentContext : creates
+    OrderView --> Client : displays
+    OrderView --> Status : displays
+    OrderStatus --> Client : contains
+    OrderStatus --> Status : has
+
+%% Observer Pattern Relationships
+    OrderStatus --> Observer : notifies
+    PaymentObserver ..|> Observer : implements
+    OrderController --> PaymentObserver : creates
+    PaymentObserver --> PaymentContext : uses
+
+%% Strategy Pattern Relationships
+    OrderController --> PaymentStrategy : uses
+    PaymentContext --> PaymentStrategy : delegates to
+    CreditCardPayment ..|> PaymentStrategy : implements
+    DebitCardPayment ..|> PaymentStrategy : implements
+
+%% Main entry point
+    class Main {
+        +main(String[] args)
+    }
+    Main --> OrderController : creates
+    Main --> Client : creates
+    Main --> CreditCardPayment : creates
+    Main --> Status : uses
